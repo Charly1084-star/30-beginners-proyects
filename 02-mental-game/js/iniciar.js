@@ -13,13 +13,17 @@ function iniciar() {
      document.querySelectorAll(".tarjeta").forEach(function(e){
           e.addEventListener("click", descubir)
      });
+
+     movimientos = 0;
+     segundos = 0;
+     minutos = 1;
      
      if(!modoRelax) {
           iniciaCrono();
      } else {
           document.querySelector("#cronometro").classList.add("cronometro-oculto");
      }
-}
+}  
 
 function reiniciar() {
      nivelActual = 0;
@@ -37,6 +41,8 @@ function iniciaJuegoNormal() {
 function iniciaJuegoRelax() {
      modoRelax = true;
      document.querySelector("#bienvenida").classList.remove("visible");
+     // document.querySelector(".control-nivel").classList.add("control-oculto");
+
      iniciar();
 }
 

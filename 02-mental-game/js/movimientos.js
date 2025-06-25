@@ -3,7 +3,7 @@ function actualizarCont () {
      movimientos++;
      movimientosTexto = movimientos;
 
-     if(movimientos > niveles[nivelActual].movimientosMax && !modoRelax) {
+     if(movimientos > niveles[nivelActual].movimientosMax || !modoRelax) {
           gameOver();
           return;
      }
@@ -11,7 +11,7 @@ function actualizarCont () {
      if (movimientos < 10){
           movimientosTexto = "0" + movimientos;
      }
-     document.querySelector('#mov').innerHTML = movimientosTexto;
+     document.querySelector('#mov').innerText = movimientosTexto;
 }
 
 function maxContador() {
@@ -19,5 +19,5 @@ function maxContador() {
      if (movMaxTexto < 10){
           movMaxTexto = "0" + movMaxTexto;
      }
-     document.querySelector('#mov-total').innerHTML = movMaxTexto;
+     document.querySelector('#mov-total').innerText = movMaxTexto;
 }

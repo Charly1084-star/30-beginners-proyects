@@ -1,12 +1,14 @@
-
-
-
-function iniciaCrono(){
      var segundos = 0;
      var minutos = 1;
      var segundosTexto;
      var minutostexto;
      var cronometro;
+
+function iniciaCrono(){
+
+     clearInterval(cronometro);
+
+     
      function actualizaCont(){
           console.log(segundos);
           segundos --;
@@ -31,8 +33,8 @@ function iniciaCrono(){
                minutostexto = '0' + minutos;
           }
 
-          document.querySelector('#minutos').innerHTML = minutostexto;
-          document.querySelector('#segundos').innerHTML = segundosTexto;
+          document.querySelector('#minutos').innerText = minutostexto;
+          document.querySelector('#segundos').innerText = segundosTexto;
      }
 
      cronometro = setInterval(actualizaCont, 1000);
