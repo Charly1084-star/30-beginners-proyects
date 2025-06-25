@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Juego de memoria Domestika - Encuentra las parejas de cartas">
+     <meta name="keywords" content="juego, memoria, cartas, domestika">
+     <meta name="author" content="Tu nombre">
+     <link rel="stylesheet" href="css/site.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="icon" href="img/web.png" type="image/x-icon">
+
+<!-- Y para mejor compatibilidad -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+     <title>Memory</title>
+</head>
+<body>
+
+     <!-- <div id="bienvenida" class="bienvenida">
+          <h1>Holaa</h1>
+          <div class="bienvenida-botones">
+               <button id="juego-normal">Quiero Jugar</button>
+               <button id="juego-relax">Modo Relax</button>
+          </div>
+     </div> -->
+
+     <div id="bienvenida" class="bienvenida">
+     <div class="logo">🧠  MEMORY</div>
+     <h1>¡Empareja las cartas!</h1>
+     <div class="bienvenida-botones">
+          <button id="juego-normal" class="btn-primario">
+               <span class="icono">🎮</span> Jugar Normal
+          </button>
+          <button id="juego-relax" class="btn-secundario">
+               <span class="icono">🧘</span> Modo Relax
+          </button>
+     </div>
+     </div>
+
+     <header class="cabecera">
+          <div class="contadores">
+               
+               <div class="contador-item">
+                    <h4 class="cabecera-titulo">Movimientos</h4>
+                    <div class="cabecera-num">
+                         <span id="mov">00</span>/<span id="mov-total">20</span>
+                    </div>
+               </div>
+
+               <div id="cronometro" class="contador-item">
+                    <h4 class="cabecera-titulo">Tiempo</h4>
+                    <div class="cabecera-num">
+                         <span id="minutos">00</span>:<span id="segundos">00</span>
+                    </div>
+               </div>
+
+               <div class="contador-item">
+                    <h4 class="cabecera-titulo">Nivel</h4>
+                         <div class="cabecera-num">
+                              <span id="nivel">01</span>
+                         </div>
+               </div>
+          </div>
+          <button id="control-nivel" class="control-nivel" title="Seleccionar Nivel">111</button>
+          
+     </header>
+
+     <main>
+          <div id="mesa" class="mesa"></div>
+          <div id="subeNivel" class="sube-nivel">
+               <div class="modal">
+                    <h2>¡Muy bien!</h2>
+                    <button id="subir">Siguiente Nivel</button>
+                    <button class="reiniciar">Reiniciar</button>
+               </div>
+          </div>
+
+          <div id="gameOver" class="game-over">
+               <div class="modal">
+                    <h2>¡Oh no!</h2>
+                    <p>Te has quedado sin movimientos! 😭</p>
+               <button class="reiniciar">Reiniciar</button>
+               </div>
+          </div>
+
+          <div id="timeOver" class="end-game">
+               <div class="modal">
+                    <h2>¡Oh no!</h2>
+                    <p>¡Te has quedado sin tiempo!</p>
+                    <button class="reiniciar">Reiniciar</button>
+               </div>
+          </div>
+          
+          <div id="endGame" class="end-game">
+               <div class="modal">
+                    <h2>¡Enhorabuena!</h2>
+                    <p>¡Has completado todos los niveles!</p>
+                    <button id="reiniciar">Reiniciar</button>
+               </div>
+          </div>
+<!--
+          <div id="feedback" class="feedback">
+               <div class="modal">
+                    <h2>Buen trabajo!</h2>
+                    <button id="reiniciar" class="reiniciar">¿Reiniciar?</button>
+               </div>
+          </div> -->
+     </main>
+     <div class="selecciona-nivel">
+          <button id="cierra-niveles" class="cierra-niveles">x</button>
+          <ul></ul>
+     </div>
+     <audio 
+          src="sound/acierto.mp3"
+          class= "sonido"
+          id = "sonido-acierto"
+          preload="auto"
+     ></audio>
+
+     <audio 
+          src="sound/error.mp3"
+          class= "sonido"
+          id = "sonido-error"
+          preload="auto"
+     ></audio>
+
+     <audio 
+          src="sound/carta.mp3"
+          class= "sonido"
+          id = "sonido-carta"
+          preload="auto"
+     ></audio>
+
+     <script src="js/variables-globales.js"></script>
+     <script src="js/descubrir-comparar.js"></script>
+     <script src="js/baraja-reparte.js"></script>
+     <script src="js/acierto-error.js"></script>
+     <script src="js/cronometro.js"></script>
+     <script src="js/movimientos.js"></script>
+     <script src="js/finalizar.js"></script>
+     <script src="js/cambia-nivel.js"></script>
+     <script src="js/game-over.js"></script>
+     <script src="js/menu-niveles.js"></script>
+     <script src="js/iniciar.js"></script>
+     <script src="js/comienza-juego.js"></script>
+</body>
+</html>
